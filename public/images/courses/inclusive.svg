@@ -1,0 +1,33 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="inclusive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#28a745;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#20c997;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#inclusive)"/>
+  
+  <!-- People holding hands -->
+  <circle cx="150" cy="80" r="15" fill="#fff" opacity="0.9"/>
+  <path d="M150 95 L150 125 M135 105 L165 105" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  <path d="M150 125 L140 155" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  <path d="M150 125 L160 155" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  
+  <circle cx="200" cy="80" r="15" fill="#fff" opacity="0.9"/>
+  <path d="M200 95 L200 125 M185 105 L215 105" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  <path d="M200 125 L190 155" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  <path d="M200 125 L210 155" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  
+  <circle cx="250" cy="80" r="15" fill="#fff" opacity="0.9"/>
+  <path d="M250 95 L250 125 M235 105 L265 105" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  <path d="M250 125 L240 155" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  <path d="M250 125 L260 155" stroke="#fff" stroke-width="4" opacity="0.9"/>
+  
+  <!-- Connecting hands -->
+  <line x1="165" y1="105" x2="185" y2="105" stroke="#ffc107" stroke-width="5" opacity="0.9"/>
+  <line x1="215" y1="105" x2="235" y2="105" stroke="#ffc107" stroke-width="5" opacity="0.9"/>
+  
+  <!-- Heart -->
+  <path d="M200 50 Q190 40 180 45 Q175 50 180 58 L200 75 L220 58 Q225 50 220 45 Q210 40 200 50 Z" fill="#ffc107" opacity="0.8"/>
+</svg>

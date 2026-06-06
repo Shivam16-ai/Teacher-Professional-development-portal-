@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#28a745"/>
+  
+  <!-- Head -->
+  <circle cx="100" cy="75" r="35" fill="#ffc107"/>
+  
+  <!-- Body -->
+  <path d="M100 110C75 110 55 130 55 155L55 210L145 210L145 155C145 130 125 110 100 110Z" fill="#20c997"/>
+  
+  <!-- Smile -->
+  <path d="M85 80 Q100 90 115 80" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+</svg>

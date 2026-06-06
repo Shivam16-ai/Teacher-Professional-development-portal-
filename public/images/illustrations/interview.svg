@@ -1,0 +1,28 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Two people interviewing -->
+  
+  <!-- Interviewer -->
+  <circle cx="100" cy="120" r="25" fill="#1e3a5f"/>
+  <path d="M100 145 L100 200 M75 165 L125 165" stroke="#1e3a5f" stroke-width="6"/>
+  <path d="M100 200 L85 240" stroke="#1e3a5f" stroke-width="6"/>
+  <path d="M100 200 L115 240" stroke="#1e3a5f" stroke-width="6"/>
+  
+  <!-- Interviewee -->
+  <circle cx="200" cy="120" r="25" fill="#d4af37"/>
+  <path d="M200 145 L200 200 M175 165 L225 165" stroke="#d4af37" stroke-width="6"/>
+  <path d="M200 200 L185 240" stroke="#d4af37" stroke-width="6"/>
+  <path d="M200 200 L215 240" stroke="#d4af37" stroke-width="6"/>
+  
+  <!-- Table between them -->
+  <rect x="110" y="180" width="80" height="8" rx="2" fill="#6c757d"/>
+  
+  <!-- Document on table -->
+  <rect x="130" y="165" width="40" height="15" rx="2" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  
+  <!-- Speech bubbles -->
+  <circle cx="80" cy="90" r="12" fill="#28a745" opacity="0.6"/>
+  <circle cx="220" cy="90" r="12" fill="#17a2b8" opacity="0.6"/>
+  
+  <!-- Checkmark above -->
+  <path d="M135 50 L145 60 L165 40" stroke="#28a745" stroke-width="5" stroke-linecap="round" fill="none"/>
+</svg>

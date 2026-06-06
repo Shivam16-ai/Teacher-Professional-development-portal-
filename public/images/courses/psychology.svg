@@ -1,0 +1,27 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="psychology" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fd7e14;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffc107;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#psychology)"/>
+  
+  <!-- Brain outline -->
+  <circle cx="200" cy="100" r="50" fill="none" stroke="#fff" stroke-width="5" opacity="0.9"/>
+  
+  <!-- Brain segments -->
+  <path d="M200 50 Q220 60 220 80" stroke="#fff" stroke-width="3" opacity="0.9" fill="none"/>
+  <path d="M200 50 Q180 60 180 80" stroke="#fff" stroke-width="3" opacity="0.9" fill="none"/>
+  <path d="M220 100 Q230 110 220 120" stroke="#fff" stroke-width="3" opacity="0.9" fill="none"/>
+  <path d="M180 100 Q170 110 180 120" stroke="#fff" stroke-width="3" opacity="0.9" fill="none"/>
+  <line x1="180" y1="90" x2="220" y2="90" stroke="#fff" stroke-width="3" opacity="0.9"/>
+  <line x1="185" y1="110" x2="215" y2="110" stroke="#fff" stroke-width="3" opacity="0.9"/>
+  
+  <!-- Lightbulb idea -->
+  <circle cx="260" cy="70" r="12" fill="#fff" opacity="0.8"/>
+  <rect x="257" y="82" width="6" height="8" fill="#fff" opacity="0.8"/>
+  <line x1="250" y1="75" x2="245" y2="80" stroke="#fff" stroke-width="2" opacity="0.7"/>
+  <line x1="270" y1="75" x2="275" y2="80" stroke="#fff" stroke-width="2" opacity="0.7"/>
+</svg>

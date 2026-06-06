@@ -1,0 +1,27 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="leadership" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc3545;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e83e8c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#leadership)"/>
+  
+  <!-- Trophy -->
+  <path d="M200 60 L180 90 L180 120 L220 120 L220 90 Z" fill="#d4af37" opacity="0.95"/>
+  <ellipse cx="200" cy="120" rx="25" ry="8" fill="#c9a029" opacity="0.95"/>
+  <rect x="190" y="120" width="20" height="30" fill="#d4af37" opacity="0.95"/>
+  <rect x="175" y="150" width="50" height="10" rx="2" fill="#c9a029" opacity="0.95"/>
+  
+  <!-- Trophy handles -->
+  <path d="M180 75 Q165 75 165 90 Q165 100 175 100" stroke="#d4af37" stroke-width="4" fill="none" opacity="0.95"/>
+  <path d="M220 75 Q235 75 235 90 Q235 100 225 100" stroke="#d4af37" stroke-width="4" fill="none" opacity="0.95"/>
+  
+  <!-- Star on trophy -->
+  <circle cx="200" cy="80" r="8" fill="#ffc107"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="80" cy="80" r="15" fill="#ffc107" opacity="0.3"/>
+  <circle cx="320" cy="120" r="20" fill="#fff" opacity="0.3"/>
+</svg>

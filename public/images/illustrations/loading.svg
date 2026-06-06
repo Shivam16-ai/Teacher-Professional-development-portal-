@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Animated spinner (CSS animation needed) -->
+  <circle cx="100" cy="100" r="50" stroke="#e9ecef" stroke-width="8" fill="none"/>
+  <circle cx="100" cy="100" r="50" stroke="#1e3a5f" stroke-width="8" fill="none" stroke-dasharray="75 235" stroke-linecap="round">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 100 100"
+      to="360 100 100"
+      dur="1s"
+      repeatCount="indefinite"/>
+  </circle>
+</svg>
