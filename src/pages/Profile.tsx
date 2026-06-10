@@ -22,8 +22,8 @@ const Profile: FC = () => {
       <div className="profile-header">
         <div className="container">
           <div className="profile-header-content">
-            <div className="profile-avatar-wrap">
-              <img src="/images/avatars/default-avatar.svg" alt="Profile Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+            <div className="profile-avatar-enhanced">
+              <img src="/images/avatars/teacher-avatar-1.svg" alt="Profile Avatar" />
             </div>
             <div className="profile-info">
               <div className="profile-name">{userInfo.name}</div>
@@ -98,9 +98,13 @@ const Profile: FC = () => {
                     <h3 className="card-title"><i className="fas fa-certificate"></i> Achievements</h3>
                   </div>
                   <div className="card-p">
-                    <div className="empty-state">
-                      <div className="empty-state-icon">🏆</div>
-                      <p>No achievements yet. Start learning to earn badges!</p>
+                    <div className="empty-state-enhanced">
+                      <img src="/images/illustrations/celebration.svg" alt="Achievements" style={{ width: '160px' }} />
+                      <h3>No Achievements Yet</h3>
+                      <p>Start learning to earn badges and certificates!</p>
+                      <Link to="/courses" className="btn btn-primary btn-sm" style={{ marginTop: '1rem' }}>
+                        <i className="fas fa-book"></i> Explore Courses
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -159,9 +163,14 @@ const Profile: FC = () => {
                 <h3 className="card-title"><i className="fas fa-history"></i> Activity Log</h3>
               </div>
               <div className="card-p">
-                <div className="empty-state">
-                  <div className="empty-state-icon">📋</div>
-                  <p>No recent activity. Start a course or take a quiz!</p>
+                <div className="empty-state-enhanced">
+                  <img src="/images/illustrations/analytics.svg" alt="Activity" style={{ width: '150px' }} />
+                  <h3>No Activity Yet</h3>
+                  <p>Your learning journey will be tracked here!</p>
+                  <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', marginTop: '1rem' }}>
+                    <Link to="/courses" className="btn btn-primary btn-sm">Start Learning</Link>
+                    <Link to="/quizzes" className="btn btn-gold btn-sm">Take a Quiz</Link>
+                  </div>
                 </div>
               </div>
             </div>

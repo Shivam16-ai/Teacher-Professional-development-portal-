@@ -1,0 +1,45 @@
+{
+  "name": "teacher-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Teacher Professional Development Platform",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --exec tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate": "tsx src/database/migrate.ts",
+    "seed": "tsx src/database/seed.ts",
+    "reset": "npm run migrate && npm run seed",
+    "check": "node scripts/check-env.bat",
+    "generate-secret": "node scripts/generate-jwt-secret.js",
+    "backup": "scripts/backup-database.bat",
+    "restore": "scripts/restore-database.bat"
+  },
+  "keywords": ["teacher", "education", "api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "express-validator": "^7.0.1",
+    "multer": "^1.4.5-lts.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.5",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/cors": "^2.8.17",
+    "@types/multer": "^1.4.11",
+    "tsx": "^4.7.0",
+    "nodemon": "^3.0.2",
+    "typescript": "^5.3.3"
+  }
+}

@@ -139,9 +139,18 @@ const Dashboard: FC = () => {
                   <h3 className="card-title">🕐 Recent Activity</h3>
                 </div>
                 <div className="card-p">
-                  <div className="empty-state">
-                    <div className="empty-state-icon">📋</div>
-                    <p>No recent activity yet. Start a course or take a quiz!</p>
+                  <div className="empty-state-enhanced">
+                    <img src="/images/illustrations/empty-state.svg" alt="No activity" style={{ width: '140px' }} />
+                    <h3>No Recent Activity</h3>
+                    <p>Start a course or take a quiz to see your activity here!</p>
+                    <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', marginTop: '1rem' }}>
+                      <Link to="/courses" className="btn btn-primary btn-sm">
+                        <i className="fas fa-book"></i> Browse Courses
+                      </Link>
+                      <Link to="/quizzes" className="btn btn-gold btn-sm">
+                        <i className="fas fa-brain"></i> Take Quiz
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -153,9 +162,9 @@ const Dashboard: FC = () => {
                   <Link to="/notifications" className="card-link">View All →</Link>
                 </div>
                 <div className="card-p">
-                  <div className="empty-state">
-                    <div className="empty-state-icon">🔔</div>
-                    <p>No new notifications</p>
+                  <div className="empty-state-enhanced">
+                    <img src="/images/illustrations/no-data.svg" alt="No notifications" style={{ width: '120px' }} />
+                    <p style={{ fontSize: '0.95rem', color: 'var(--text-light)' }}>No new notifications</p>
                   </div>
                 </div>
               </div>

@@ -134,166 +134,194 @@ const Register: FC = () => {
   }
 
   return (
-    <div>
-      <div className="auth-page">
-        <Card className="auth-card">
-          <CardContent padding="none">
-            <div className="auth-logo">
-              <div className="auth-logo-icon">
-                <img src="/images/logo/logo.svg" alt="TPDP" style={{ width: '48px', height: '48px' }} />
-              </div>
-              <span>TP<em>DP</em></span>
+    <div className="auth-page">
+      <Card className="auth-card wide">
+        <CardContent padding="none">
+          <div className="auth-logo">
+            <div className="auth-logo-icon">
+              <img src="/images/logo/logo.svg" alt="TPDP" style={{ width: '36px', height: '36px' }} />
             </div>
-            <h2>Create Your Account</h2>
-            <p className="auth-subtitle">Join 25,000+ educators on TPDP — it's free!</p>
+            <span>TP<em>DP</em></span>
+          </div>
+          <h2>Create Your Account 🚀</h2>
+          <p className="auth-subtitle">Join 25,000+ educators advancing their careers with TPDP — it's completely free!</p>
 
-            {error && <div className="error-box"><i className="fas fa-exclamation-circle"></i> {error}</div>}
-            {success && <div className="success-box"><i className="fas fa-check-circle"></i> {success}</div>}
+          {error && <div className="error-box"><i className="fas fa-exclamation-circle"></i> {error}</div>}
+          {success && <div className="success-box"><i className="fas fa-check-circle"></i> {success}</div>}
 
-            <form onSubmit={handleRegister}>
-              <div className="form-row">
-                <Input
-                  type="text"
-                  id="regName"
-                  label="Full Name *"
-                  placeholder="e.g. Priya Sharma"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  disabled={loading}
-                />
-                <Input
-                  type="email"
-                  id="regEmail"
-                  label="Email Address *"
-                  placeholder="your@email.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  disabled={loading}
-                />
-              </div>
-              
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="regPassword">Password *</label>
-                  <div className="password-wrapper">
-                    <Input
-                      type={showPassword ? 'text' : 'password'}
-                      id="regPassword"
-                      placeholder="Min 6 characters"
-                      value={formData.password}
-                      onChange={handleChange}
-                      required
-                      disabled={loading}
-                    />
-                    <button 
-                      type="button" 
-                      className="password-toggle"
-                      onClick={() => setShowPassword(!showPassword)}
-                      disabled={loading}
-                    >
-                      <i className={`fas fa-${showPassword ? 'eye-slash' : 'eye'}`}></i>
-                    </button>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="regConfirm">Confirm Password *</label>
-                  <div className="password-wrapper">
-                    <Input
-                      type={showConfirm ? 'text' : 'password'}
-                      id="regConfirm"
-                      placeholder="Repeat password"
-                      value={formData.confirm}
-                      onChange={handleChange}
-                      required
-                      disabled={loading}
-                    />
-                    <button 
-                      type="button" 
-                      className="password-toggle"
-                      onClick={() => setShowConfirm(!showConfirm)}
-                      disabled={loading}
-                    >
-                      <i className={`fas fa-${showConfirm ? 'eye-slash' : 'eye'}`}></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="form-row">
-                <div className="form-group">
-                  <label><i className="fas fa-book"></i> Subject Specialization *</label>
-                  <select 
-                    id="regSubject" 
-                    required 
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="form-control"
-                    disabled={loading}
-                  >
-                    <option value="">Select subject</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Science / Physics">Science / Physics</option>
-                    <option value="Science / Chemistry">Science / Chemistry</option>
-                    <option value="Science / Biology">Science / Biology</option>
-                    <option value="English">English</option>
-                    <option value="Hindi">Hindi</option>
-                    <option value="Social Studies / History">Social Studies / History</option>
-                    <option value="Social Studies / Geography">Social Studies / Geography</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Commerce / Accountancy">Commerce / Accountancy</option>
-                    <option value="Economics">Economics</option>
-                    <option value="Physical Education">Physical Education</option>
-                    <option value="Art & Craft">Art & Craft</option>
-                    <option value="Music">Music</option>
-                    <option value="Special Education">Special Education</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <Input
-                  type="text"
-                  id="regQualification"
-                  label="Qualification *"
-                  placeholder="e.g. B.Ed, M.Ed, PhD"
-                  value={formData.qualification}
-                  onChange={handleChange}
-                  required
-                  disabled={loading}
-                />
-              </div>
-              
+          <form onSubmit={handleRegister}>
+            <div className="form-row">
               <Input
                 type="text"
-                id="regSchool"
-                label="Current School / Institution (optional)"
-                placeholder="e.g. DAV Public School, Mumbai"
-                value={formData.school}
+                id="regName"
+                label="Full Name *"
+                placeholder="e.g. Priya Sharma"
+                value={formData.name}
                 onChange={handleChange}
+                required
                 disabled={loading}
               />
-
-              <div className="info-box">
-                <i className="fas fa-shield-alt" style={{color:'var(--navy)'}}></i>
-                By registering, you agree to our Terms of Service. Your data is stored securely on this device.
-              </div>
-
-              <Button 
-                type="submit" 
-                variant="primary" 
-                fullWidth 
-                icon={loading ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-rocket"></i>}
+              <Input
+                type="email"
+                id="regEmail"
+                label="Email Address *"
+                placeholder="your@email.com"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 disabled={loading}
-              >
-                {loading ? 'Creating Account...' : 'Create My Account'}
-              </Button>
-            </form>
-
-            <div className="auth-footer">
-              Already a member? <Link to="/login">Login here</Link>
+              />
             </div>
-          </CardContent>
-        </Card>
+            
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="regPassword">Password *</label>
+                <div className="password-wrapper">
+                  <Input
+                    type={showPassword ? 'text' : 'password'}
+                    id="regPassword"
+                    placeholder="Min 6 characters"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                    disabled={loading}
+                  />
+                  <button 
+                    type="button" 
+                    className="password-toggle"
+                    onClick={() => setShowPassword(!showPassword)}
+                    disabled={loading}
+                  >
+                    <i className={`fas fa-${showPassword ? 'eye-slash' : 'eye'}`}></i>
+                  </button>
+                </div>
+              </div>
+              <div className="form-group">
+                <label htmlFor="regConfirm">Confirm Password *</label>
+                <div className="password-wrapper">
+                  <Input
+                    type={showConfirm ? 'text' : 'password'}
+                    id="regConfirm"
+                    placeholder="Repeat password"
+                    value={formData.confirm}
+                    onChange={handleChange}
+                    required
+                    disabled={loading}
+                  />
+                  <button 
+                    type="button" 
+                    className="password-toggle"
+                    onClick={() => setShowConfirm(!showConfirm)}
+                    disabled={loading}
+                  >
+                    <i className={`fas fa-${showConfirm ? 'eye-slash' : 'eye'}`}></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div className="form-row">
+              <div className="form-group">
+                <label><i className="fas fa-book"></i> Subject Specialization *</label>
+                <select 
+                  id="regSubject" 
+                  required 
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="form-control"
+                  disabled={loading}
+                >
+                  <option value="">Select subject</option>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Science / Physics">Science / Physics</option>
+                  <option value="Science / Chemistry">Science / Chemistry</option>
+                  <option value="Science / Biology">Science / Biology</option>
+                  <option value="English">English</option>
+                  <option value="Hindi">Hindi</option>
+                  <option value="Social Studies / History">Social Studies / History</option>
+                  <option value="Social Studies / Geography">Social Studies / Geography</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Commerce / Accountancy">Commerce / Accountancy</option>
+                  <option value="Economics">Economics</option>
+                  <option value="Physical Education">Physical Education</option>
+                  <option value="Art & Craft">Art & Craft</option>
+                  <option value="Music">Music</option>
+                  <option value="Special Education">Special Education</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <Input
+                type="text"
+                id="regQualification"
+                label="Qualification *"
+                placeholder="e.g. B.Ed, M.Ed, PhD"
+                value={formData.qualification}
+                onChange={handleChange}
+                required
+                disabled={loading}
+              />
+            </div>
+            
+            <Input
+              type="text"
+              id="regSchool"
+              label="Current School / Institution (optional)"
+              placeholder="e.g. DAV Public School, Mumbai"
+              value={formData.school}
+              onChange={handleChange}
+              disabled={loading}
+            />
+
+            <div className="info-box">
+              <i className="fas fa-shield-alt" style={{color:'var(--navy)'}}></i>
+              By registering, you agree to our Terms of Service. Your data is stored securely on this device.
+            </div>
+
+            <Button 
+              type="submit" 
+              variant="primary" 
+              fullWidth 
+              icon={loading ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-rocket"></i>}
+              disabled={loading}
+            >
+              {loading ? 'Creating Account...' : 'Create My Account'}
+            </Button>
+          </form>
+
+          <div className="auth-footer">
+            Already a member? <Link to="/login">Login here</Link>
+          </div>
+        </CardContent>
+      </Card>
+      
+      {/* Decorative images */}
+      <div style={{
+        position: 'fixed',
+        right: '5%',
+        top: '15%',
+        zIndex: 0,
+        opacity: 0.5,
+        pointerEvents: 'none'
+      }}>
+        <img 
+          src="/images/illustrations/jobs.svg" 
+          alt="" 
+          style={{ width: '200px', height: 'auto' }}
+        />
+      </div>
+      <div style={{
+        position: 'fixed',
+        left: '5%',
+        bottom: '10%',
+        zIndex: 0,
+        opacity: 0.6,
+        pointerEvents: 'none'
+      }}>
+        <img 
+          src="/images/illustrations/analytics.svg" 
+          alt="" 
+          style={{ width: '180px', height: 'auto' }}
+        />
       </div>
     </div>
   )

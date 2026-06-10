@@ -84,95 +84,122 @@ const Login: FC = () => {
   }
 
   return (
-    <div>
-      <div className="auth-page">
-        <Card className="auth-card">
-          <CardContent padding="none">
-            <div className="auth-logo">
-              <div className="auth-logo-icon">
-                <img src="/images/logo/logo.svg" alt="TPDP" style={{ width: '48px', height: '48px' }} />
-              </div>
-              <span>TP<em>DP</em></span>
+    <div className="auth-page">
+      <Card className="auth-card">
+        <CardContent padding="none">
+          <div className="auth-logo">
+            <div className="auth-logo-icon">
+              <img src="/images/logo/logo.svg" alt="TPDP" style={{ width: '36px', height: '36px' }} />
             </div>
-            <h2>Welcome Back!</h2>
-            <p className="auth-subtitle">Sign in to your teacher account</p>
+            <span>TP<em>DP</em></span>
+          </div>
+          <h2>Welcome Back! 👋</h2>
+          <p className="auth-subtitle">Sign in to continue your professional development journey</p>
 
-            <div className="info-box">
-              <i className="fas fa-info-circle"></i>
-              <strong> Note:</strong> You must register first before logging in. New user? Click "Create New Account" below.
+          {error && (
+            <div className="error-box">
+              <i className="fas fa-exclamation-circle"></i> {error}
             </div>
+          )}
 
-            {error && <div className="error-box"><i className="fas fa-exclamation-circle"></i> {error}</div>}
-
-            <form onSubmit={handleLogin}>
-              <Input
-                type="email"
-                id="loginEmail"
-                label="Email Address"
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                disabled={loading}
-              />
-              
-              <div className="form-group">
-                <label htmlFor="loginPassword">Password</label>
-                <div className="password-wrapper">
-                  <Input
-                    type={showPassword ? 'text' : 'password'}
-                    id="loginPassword"
-                    placeholder="Enter your password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    disabled={loading}
-                  />
-                  <button 
-                    type="button" 
-                    className="password-toggle"
-                    onClick={() => setShowPassword(!showPassword)}
-                    disabled={loading}
-                  >
-                    <i className={`fas fa-${showPassword ? 'eye-slash' : 'eye'}`}></i>
-                  </button>
-                </div>
+          <form onSubmit={handleLogin}>
+            <Input
+              type="email"
+              id="loginEmail"
+              label="Email Address"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={loading}
+            />
+            
+            <div className="form-group">
+              <label htmlFor="loginPassword">Password</label>
+              <div className="password-wrapper">
+                <Input
+                  type={showPassword ? 'text' : 'password'}
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  disabled={loading}
+                />
+                <button 
+                  type="button" 
+                  className="password-toggle"
+                  onClick={() => setShowPassword(!showPassword)}
+                  disabled={loading}
+                >
+                  <i className={`fas fa-${showPassword ? 'eye-slash' : 'eye'}`}></i>
+                </button>
               </div>
-              
-              <div className="form-options">
-                <label className="remember-me">
-                  <input 
-                    type="checkbox" 
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
-                    disabled={loading}
-                  /> Remember me
-                </label>
-                <a href="#" onClick={(e) => {e.preventDefault(); alert('Password reset: Please contact your administrator or create a new account.')}}>Forgot password?</a>
-              </div>
-              
-              <Button 
-                type="submit" 
-                variant="primary" 
-                fullWidth 
-                icon={loading ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-sign-in-alt"></i>}
-                disabled={loading}
-              >
-                {loading ? 'Logging in...' : 'Login to Dashboard'}
-              </Button>
-            </form>
-
-            <div className="auth-divider">or</div>
-
-            <Link to="/register" className="btn btn-outline btn-full">
-              <i className="fas fa-user-plus"></i> Create New Account
-            </Link>
-
-            <div className="auth-footer">
-              Don't have an account? <Link to="/register">Register Free</Link>
             </div>
-          </CardContent>
-        </Card>
+            
+            <div className="form-options">
+              <label className="remember-me">
+                <input 
+                  type="checkbox" 
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  disabled={loading}
+                /> Remember me
+              </label>
+              <a href="#" onClick={(e) => {e.preventDefault(); alert('Password reset: Please contact your administrator or create a new account.')}}>Forgot password?</a>
+            </div>
+            
+            <Button 
+              type="submit" 
+              variant="primary" 
+              fullWidth 
+              icon={loading ? <i className="fas fa-spinner fa-spin"></i> : <i className="fas fa-sign-in-alt"></i>}
+              disabled={loading}
+            >
+              {loading ? 'Logging in...' : 'Login to Dashboard'}
+            </Button>
+          </form>
+
+          <div className="auth-divider">or</div>
+
+          <Link to="/register" className="btn btn-outline btn-full">
+            <i className="fas fa-user-plus"></i> Create New Account
+          </Link>
+
+          <div className="auth-footer">
+            Don't have an account? <Link to="/register">Register Free</Link>
+          </div>
+        </CardContent>
+      </Card>
+      
+      {/* Decorative image on the side */}
+      <div style={{
+        position: 'fixed',
+        right: '5%',
+        bottom: '10%',
+        zIndex: 0,
+        opacity: 0.6,
+        pointerEvents: 'none'
+      }}>
+        <img 
+          src="/images/illustrations/quiz.svg" 
+          alt="" 
+          style={{ width: '200px', height: 'auto' }}
+        />
+      </div>
+      <div style={{
+        position: 'fixed',
+        left: '5%',
+        top: '15%',
+        zIndex: 0,
+        opacity: 0.5,
+        pointerEvents: 'none'
+      }}>
+        <img 
+          src="/images/illustrations/leaderboard.svg" 
+          alt="" 
+          style={{ width: '180px', height: 'auto' }}
+        />
       </div>
     </div>
   )

@@ -17,13 +17,22 @@ import Register from './pages/Register'
 import Reports from './pages/Reports'
 import ResumeBuilder from './pages/ResumeBuilder'
 import Timetable from './pages/Timetable'
+import Welcome from './pages/Welcome'
 import ProtectedRoute from './components/ProtectedRoute'
 import MainLayout from './components/layouts/MainLayout'
 import AuthLayout from './components/layouts/AuthLayout'
+import { getToken } from './utils/auth'
 
 const App: FC = () => {
+  const isAuthenticated = !!getToken()
+
   return (
     <Routes>
+      {/* Welcome/Landing Page */}
+      <Route path="/" element={
+        isAuthenticated ? <Navigate to="/dashboard" replace /> : <Welcome />
+      } />
+      
       {/* Public Routes with Auth Layout */}
       <Route path="/login" element={
         <AuthLayout>
@@ -34,15 +43,6 @@ const App: FC = () => {
         <AuthLayout>
           <Register />
         </AuthLayout>
-      } />
-      
-      {/* Protected Routes with Main Layout */}
-      <Route path="/" element={
-        <ProtectedRoute>
-          <MainLayout>
-            <Dashboard />
-          </MainLayout>
-        </ProtectedRoute>
       } />
       <Route path="/dashboard" element={
         <ProtectedRoute>

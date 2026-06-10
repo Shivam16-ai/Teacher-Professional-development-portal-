@@ -230,3 +230,104 @@ For custom images or modifications:
 
 **Last Updated:** June 6, 2026  
 **Project:** Teacher Professional Development Platform (TPDP)
+
+
+## 🆕 Additional Illustrations Added
+
+### New Feature Illustrations
+- **welcome.svg** (400×400) - Graduation cap with book for welcome/landing page
+- **teacher-board.svg** (400×300) - Teacher blackboard with welcome message
+- **celebration.svg** (300×300) - Trophy with confetti for achievements
+- **resume.svg** (300×350) - Resume document for resume builder feature
+- **calendar.svg** (320×320) - Calendar with scheduled items for timetable
+- **notification.svg** (300×300) - Bell with notification badge
+
+### Usage Examples for New Images
+
+#### Welcome Page Hero
+```tsx
+<img 
+  src="/images/illustrations/welcome.svg" 
+  alt="Welcome to TPDP"
+  style={{ width: '300px', animation: 'float-gentle 6s ease-in-out infinite' }}
+/>
+```
+
+#### Teacher Board (Call to Action)
+```tsx
+<img 
+  src="/images/illustrations/teacher-board.svg" 
+  alt="Join TPDP"
+  style={{ width: '280px', margin: '0 auto' }}
+/>
+```
+
+#### Achievements/Success
+```tsx
+<div className="empty-state-enhanced">
+  <img src="/images/illustrations/celebration.svg" alt="Achievements" style={{ width: '160px' }} />
+  <h3>Congratulations!</h3>
+  <p>You've earned a new badge!</p>
+</div>
+```
+
+#### Resume Builder
+```tsx
+<img 
+  src="/images/illustrations/resume.svg" 
+  alt="Resume Builder"
+  style={{ width: '200px' }}
+/>
+```
+
+#### Timetable/Schedule
+```tsx
+<img 
+  src="/images/illustrations/calendar.svg" 
+  alt="Timetable"
+  style={{ width: '200px' }}
+/>
+```
+
+#### Notifications
+```tsx
+<img 
+  src="/images/illustrations/notification.svg" 
+  alt="Notifications"
+  style={{ width: '150px' }}
+/>
+```
+
+## 📊 Updated Image Count
+
+**Total Images:** 30 SVG files
+- Logo & Branding: 2
+- Avatars: 3
+- Course Thumbnails: 6
+- Banners: 1
+- UI Illustrations: 17 (expanded from 11)
+- Favicon: 1
+
+## 🎨 Enhanced Components
+
+### Pages Now Using Images:
+1. **Welcome.tsx** (NEW) - Landing page with hero images and feature cards
+2. **Login.tsx** - Enhanced with decorative images and modern styling
+3. **Register.tsx** - Enhanced with decorative images and improved layout
+4. **Dashboard.tsx** - Empty states now use illustrations
+5. **Profile.tsx** - Avatar and empty state illustrations
+6. **Courses.tsx** - Course thumbnails for all categories
+
+### Styling Enhancements Added:
+- ✅ Animated floating effects for hero images
+- ✅ Hover transitions for feature cards
+- ✅ Enhanced empty states with images
+- ✅ Decorative background elements on auth pages
+- ✅ Professional avatar component with online status
+- ✅ Loading overlays with animated spinners
+- ✅ Modal components with image support
+
+---
+
+**Last Updated:** June 10, 2026  
+**Total Assets:** 30 images + comprehensive styling system

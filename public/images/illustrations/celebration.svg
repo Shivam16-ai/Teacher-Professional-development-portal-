@@ -1,0 +1,28 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Trophy -->
+  <path d="M150 100 L120 150 L120 190 L180 190 L180 150 Z" fill="#d4af37"/>
+  <ellipse cx="150" cy="190" rx="35" ry="10" fill="#c9a029"/>
+  <rect x="135" y="190" width="30" height="50" fill="#d4af37"/>
+  <rect x="110" y="240" width="80" height="15" rx="4" fill="#c9a029"/>
+  
+  <!-- Trophy handles -->
+  <path d="M120 120 Q100 120 100 140 Q100 155 115 155" stroke="#d4af37" stroke-width="5" fill="none"/>
+  <path d="M180 120 Q200 120 200 140 Q200 155 185 155" stroke="#d4af37" stroke-width="5" fill="none"/>
+  
+  <!-- Star on trophy -->
+  <circle cx="150" cy="130" r="12" fill="#ffc107"/>
+  
+  <!-- Confetti -->
+  <rect x="50" y="80" width="15" height="15" fill="#dc3545" opacity="0.8" transform="rotate(25 57 87)"/>
+  <rect x="230" y="100" width="12" height="12" fill="#28a745" opacity="0.8" transform="rotate(-15 236 106)"/>
+  <rect x="80" y="180" width="10" height="10" fill="#17a2b8" opacity="0.8" transform="rotate(45 85 185)"/>
+  <rect x="220" y="200" width="14" height="14" fill="#ffc107" opacity="0.8" transform="rotate(-30 227 207)"/>
+  <circle cx="60" cy="140" r="6" fill="#6f42c1" opacity="0.8"/>
+  <circle cx="240" cy="160" r="7" fill="#dc3545" opacity="0.8"/>
+  <circle cx="90" cy="240" r="5" fill="#28a745" opacity="0.8"/>
+  <circle cx="210" cy="240" r="8" fill="#ffc107" opacity="0.8"/>
+  
+  <!-- Ribbons -->
+  <path d="M 150 190 L 140 270 L 150 260 L 160 270 Z" fill="#dc3545"/>
+  <path d="M 150 190 L 170 270 L 160 260 L 150 270 Z" fill="#28a745"/>
+</svg>
